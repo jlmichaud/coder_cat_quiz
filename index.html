@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Acme&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="styles.css">
+    <title>Coder Cat Quiz</title>
+</head>
+<body>
+    
+    <header class="header container">
+        <h1 id="title">What kind of coder cat are you&nbsp?</h1>
+        <p id="description">Answer a few questions to find out!</p>
+    </header>
+    <main class="main container">
+        <form id="survey-form">
+
+            <!-- text inputs -->
+
+            <div id="name-container">
+                <label for="name" id="name-label" class="form__label">Name: <span class="required text--required">*required</span>
+                </label>
+                <input type="text" id="name" class="form__input" placeholder="your name" maxlength="75">
+                <p class="error-message hidden">Error message</p>
+            </div>
+
+            <div class="email-lives">
+                <!-- Email input -->
+                <div id="email-container">
+                    <label for="email" id="email-label" class="form__label">Email: <span class="required text--required">*required</span></label>
+                    <input type="email" id="email" class="form__input" placeholder="your email address"  maxlength="75">
+                    <p class="error-message hidden">Error message</p>
+                </div>
+                <!-- Number input -->
+                <div id="lives-container">
+                    <label for="number" id="lives-label" class="form__label">Number of lives lived:</label>
+                    <input type="number" id="number" class="form__input" name="lives" placeholder="number of lives" min="1" max="9">
+                    <p class="error-message hidden">Error message</p>
+                </div>
+            </div>
+
+
+            <!-- radio-buttons #1 -->
+            <div class="input-container">
+                <span class="required">*required</span>
+                <fieldset>
+                    <legend class="btn-chk__label">You've been working on a coding problem for an hour and aren't making any progress. Do you:</legend>
+                
+                    <div class="input-group">
+                        <input type="radio" id="take-break" name="break-work" value="break">
+                        <label for="take-break">Take a break</label>
+                    </div>
+                
+                    <div class="input-group">
+                        <input type="radio" id="keep-working" name="break-work" value="work">
+                        <label for="keep-working">Keep working</label>
+                    </div>
+                    <p class="error-message hidden">Error message</p>
+                </fieldset>
+                
+            </div>          
+
+            <!-- radio-buttons 2 -->
+            <div class="input-container">
+                <span class="required">*required</span>
+                <fieldset>
+                    <legend class="btn-chk__label">Are you more laid back or kind of intense?</legend>
+                
+                    <div class="input-group">
+                        <input type="radio" id="laid-back" name="intensity" value="laid-back">
+                        <label for="laid-back">Laid back</label>
+                    </div>
+                
+                    <div class="input-group">
+                        <input type="radio" id="intense" name="intensity" value="intense">
+                        <label for="intense">Intense</label>
+                    </div>
+                </fieldset>
+                <p class="error-message hidden">Error message</p>
+            </div>
+
+
+            <!-- radio-buttons #3 -->
+            <div class="input-container">
+                <span class="required">*required</span>
+                <fieldset>
+                    <legend class="btn-chk__label">What do you need in order to recharge? </legend>
+                
+                    <div class="input-group">
+                        <input type="radio" id="alone" name="recharge" value="alone">
+                        <label for="alone">Time alone</label>
+                    </div>
+                
+                    <div class="input-group">
+                        <input type="radio" id="social" name="recharge" value="social">
+                        <label for="social">Social interaction</label>
+                    </div>
+                </fieldset>
+                <p class="error-message hidden">Error message</p>
+            </div>
+
+
+            <!-- checkboxes -->
+            <div class="input-container">
+                <fieldset>
+                    <legend class="btn-chk__label">Which languages do you know?</legend>
+                
+                    <div class="input-group">
+                        <input type="checkbox" id="html" name="html">
+                        <label for="html">HTML</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="css" name="css">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="javascript" name="javascript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="python" name="python">
+                        <label for="python">Python</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="c" name="c">
+                        <label for="c">C</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="c#" name="c#">
+                        <label for="c#">C#</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="c++" name="c++">
+                        <label for="c++">C++</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="ruby" name="ruby">
+                        <label for="ruby">Ruby</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="php" name="php">
+                        <label for="php">PHP</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="java" name="java">
+                        <label for="java">Java</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- dropdown -->
+            <label for="dropdown" class="form__label dropdown__label">What is your favourite toy?</label>
+            <select name="toy" id="dropdown">
+                <option value="">-- Choose an option --</option>
+                <option value="yarn">Ball of yarn</option>
+                <option value="catnip-mouse">Catnip mouse</option>
+                <option value="box">Cardboard box</option>
+                <option value="fishing-pole">Feather on a fishing line</option>
+                <option value="laser">Laser pointer</option>
+            </select>
+
+            <!-- textarea -->
+
+            <label for="comments" class="form__label">Anything else you'd like to add?</label>
+            <textarea id="comments" name="comments" class="form__input" rows="3" cols="40"></textarea>
+            
+            
+            <!-- submit -->
+            <button id="submit">Submit</button>
+        </form>
+
+    <!-- cats! -->
+        <section id="cat">
+            <div class="display-none image" id="napper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1TUU4HIamuo2H87U2p6vZBlY5dT4hUP0hDA&usqp=CAU" alt="A grey tabby dozes on a laptop keyboard with an expression of sleepy irritation">
+                <p>You know better than to keep hammering away at a coding problem for hours on end when nothing is working. The important thing is to recognize when it’s time to take a brain-recharging nap. The sooner you nap, the sooner this code gets fixed. </p>
+            </div>
+            <div class="display-none image" id="cute">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMVJsxBkRZnu6cTXjofYUeyIi8nZ27jHDN2A&usqp=CAU" alt="A kitten lies on its side, paws draped over computer keyboard">
+                <p>Stubborn coding problems can really bring you down. You’ll figure it out before too long, but in the meantime why not take a social media break to let everyone see how cute and adorable you are? All those likes will give you the confidence you need to go back and conquer that coding problem!</p>
+            </div>
+            <div class="display-none image" id="aimless">
+                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F24%2F2020%2F03%2F19%2FGettyImages-957662058-2000.jpg" alt="A cat sits asleep on a laptop keyboard">
+                <p>Look, when you’ve come up against a really tough coding problem you’re just gonna try a bit of everything. With so many possible keystroke combinations there’s bound to be one of them that will get your code to work. Also, a ginger tabby you know says that headbutting the screen sometimes does the trick. 
+                </p>
+            </div>
+            <div class="display-none image" id="get-help">
+                <img src="https://www.rd.com/wp-content/uploads/2017/04/01_cat_Heres-Why-Your-Laptop-is-So-Irresistible-to-Your-Cat_404437084_Wondervisuals_FT.jpg?resize=768,480" alt="A cat sits on the lap of someone typing at a computer">
+                <p>A lot of coder cats are so afraid of looking like small, ridiculous dogs that they wait way too long before they ask for help, but not you, my fine furried friend. You recognize that every cat needs help and a head pat from time to time. Just remember to give it an honest effort first because that’s what will help you remember the solution next time.</p>
+            </div>
+            <div class="display-none image" id="pro">
+                <img src="https://i.insider.com/55a67a9b371d22472c8b463c?width=300&format=jpeg&auto=webp" alt="A cat stares intently at a laptop screen">
+                <p>When all the other coder cats have failed to get things working by napping, meowing, cuddling or sitting on keyboards, you saunter in and quickly hone in on that one bug that everyone else missed. You are a hero and will accept the praise you so richly deserve in the form of scratches behind the ears.</p>
+            </div>
+            <div class="display-none image" id="anxious">
+                <img src="https://www.backblaze.com/blog/wp-content/uploads/2013/01/blog-cat-on-laptop.jpg" alt="A wide-eyed anxious-looking cat sits on a laptop keyboard">
+                <p>Oh my sweet, sweet little anxious calico coder cat. Listen, everything’s gonna be ok. We can fix this. Let’s have a look at your code together and we’ll figure it out. Can… er... can you let me look at the code?... Just move your paw a little bit?... No… ? Ok, well… just meow if you need me.
+                </p>
+            </div>
+            <div class="display-none image" id="curmudgeon">
+                <img src="https://i.redd.it/3tb4vxbbfyh21.jpg" alt="A cat wearing glasses and a bowtie meows angrily at a computer screen">
+                <p>Programming bugs don’t stand a chance against you, old fella. You’re not going to patiently coax your code into submission. You’re going to angrily meow at it until it bends to your will. Also, you’re dapper AF.</p>
+            </div>
+            <div class="display-none image" id="witch">
+                <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy80MTQyOTAwL29yaWdpbi5qcGciLCJleHBpcmVzX2F0IjoxNjU2NzIwMzA2fQ.4EBAIWKiAxdbuVv-0K6mTtsM95E606wPzuMAw0lC_KA/img.jpg" alt="a kitten sits on laptop keyboard looking directly into the camera">
+                <p>You’re no mere programmer. You, my little friend, are a code witch. Your code has its own signature style and your bug fixes are ingenious. Once your code magic is done for the day you will go home where you will find many spirits to meow at (though your humans will insist that no one is there).</p>
+            </div>
+        </section>
+        <div class="reset-div">
+            <button class="display-none" id="reset">Reset</button>
+        </div>
+    </main>
+    <!-- this seems hack-y but I can't figure out how to not have the bottom margin collapse -->
+    <div class="bottom-space"></div>
+    <script src="script.js"></script>
+</body>
+</html>
