@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Acme&display=swap");
+
 /* =============
    Global styles
    ============= */
@@ -70,6 +72,7 @@ main {
 	background-image: linear-gradient(var(--clr-form), var(--clr-form2));
 	box-shadow: 1px 1px 8px #464646;
 	border-radius: 5px;
+	margin: 0 auto 3em;
 }
 
 #survey-form {
@@ -97,9 +100,9 @@ main {
 	}
 }
 
-.bottom-space {
-	height: 2em;
-}
+/* ==========
+   Components
+   ========== */
 
 .input-container {
 	background-color: var(--clr-div);
@@ -153,17 +156,17 @@ fieldset {
 	width: 100%;
 }
 
-#dropdown {
-	all: unset;
+.dropdown {
 	background-color: var(--clr-field);
+	font-size: 1.1rem;
 	border: none;
 	border-radius: 3px;
-	padding: 0.2em 3em;
-	max-width: 100%;
+	padding: 0.4em 3em;
 	box-sizing: border-box;
+	outline: 0;
 }
 
-#comments {
+.comments {
 	all: unset;
 	display: block;
 	background: var(--clr-field);
@@ -177,13 +180,17 @@ fieldset {
 }
 
 /* how do I add a shadow on hover/focus without disabling base box-shadow? */
-input:hover,
 input:focus,
-#dropdown:hover,
-#dropdown:focus,
-#comments:hover,
-#comments:focus {
+.dropdown:focus,
+.comments:focus {
 	box-shadow: 0 0 2px 4px #00e1ff;
+	transition: all ease-in 300ms;
+}
+
+input:hover,
+.dropdown:hover,
+.comments:hover {
+	background-color: #c9fcde;
 	transition: all ease-in 300ms;
 }
 
@@ -191,6 +198,18 @@ input:focus,
 
 .hidden {
 	visibility: hidden;
+}
+
+.error-message {
+	font-size: .9rem;
+	font-weight: 200;
+	line-height: 1.3;
+	margin-top: 0.5em;
+}
+
+.error-highlight {
+	border: 5px solid #ff1e1e;
+	border-radius: 3px;
 }
 
 /* =======
@@ -217,26 +236,18 @@ button:hover {
 	margin-left: .1em;
 }
 
+/* why is justify-content: end not being applied in chrome?? */
+
 .reset-div {
 	display: flex;
 	justify-content: end;
 	padding-bottom: 2em;
-	margin-right: 2em;
+	/* margin-right: 2em; */
 }
 
 #reset {
 	--clr-button: #8cffd9;
-}
-
-.error-message {
-	font-size: .8rem;
-	line-height: 1.3;
-	margin-top: 0.5em;
-}
-
-.error-highlight {
-	border: 5px solid #ff1e1e;
-	border-radius: 3px;
+	margin-right: 2em;
 }
 
 /* ======
